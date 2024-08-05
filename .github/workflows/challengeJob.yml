@@ -27,3 +27,13 @@ jobs:
           echo Job3: macOS Step 1
           TODAY=$(date +"%Y-%m-%d")
           echo "TODAY: $TODAY"
+  job4:
+    name: 'Job4: Ubuntu 22.04'
+    runs-on: ubuntu-22.04
+    needs: [ job1, job2, job3 ]
+    steps:
+      - name: 'Job4: Ubuntu 22.04 Step 1'
+        run: |
+          echo Job4: Ubuntu 22.04 Step 1
+          TODAY=$(date +"%Y-%m-%d")
+          echo "TODAY: $TODAY"
