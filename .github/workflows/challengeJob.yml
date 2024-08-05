@@ -1,0 +1,29 @@
+name: Challenge Job
+on: push
+jobs:
+  job1:
+    name: 'Job1: Ubuntu'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Job1: Ubuntu Step 1'
+        run: |
+          echo Job1: Ubuntu Step 1
+          TODAY=$(date +"%Y-%m-%d")
+          echo "TODAY: $TODAY"
+  job2:
+    name: 'Job2: Windows'
+    runs-on: windows-latest
+    steps:
+      - name: 'Job2: Windows Step 1'
+        run: |
+          $timestamp = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
+          Write-Host "Current timestamp: $timestamp"
+  job3:
+    name: 'Job3: macOS'
+    runs-on: macos-latest
+    steps:
+      - name: 'Job3: macOS Step 1'
+        run: |
+          echo Job3: macOS Step 1
+          TODAY=$(date +"%Y-%m-%d")
+          echo "TODAY: $TODAY"
